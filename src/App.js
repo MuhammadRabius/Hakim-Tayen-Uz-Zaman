@@ -10,6 +10,7 @@ import NotFoundPage from './componets/NotFoundPage/NFP';
 import Blog from './componets/Blog/Blog';
 import Login from './componets/Login/Login'
 import AboutMe from './componets/AboutMe/AboutMe';
+import Register from './componets/Register/Register';
 import Appointment from './componets/Appointment/Appointment';
 
 
@@ -26,6 +27,7 @@ function App() {
         <Route path='/*' element={<NotFoundPage/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/appointment' element={<Appointment/>}></Route>
+        <Route path='/register' element={<Register/>}></Route>
       </Routes>
       <Footer></Footer>
       

@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Button, Form, Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
-      const [email,setEmail]=useState();
-      const [password,setPassword]=useState();
+      const [email,setEmail]=useState('');
+      const [password,setPassword]=useState('');
+      const navigate =useNavigate();
+
 
       const handleEmail =event=>{
             const email =event.target.value;
@@ -17,9 +19,8 @@ const Login = () => {
             console.log(pass)
       }
       
-
       const handleSubmit=()=>{
-
+        navigate('/');
       }
       return (
            <div className='login-container'>
@@ -41,9 +42,7 @@ const Login = () => {
                         <Form.Label>Password</Form.Label>
                         <Form.Control onBlur={handPassword} type="password" placeholder="Password" required/>
                         </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                        <Form.Check type="checkbox" label="Accept Terms,Conditions and Privacy Policy" />
-                        </Form.Group>
+                        
                         <p className='flex items-center'>Create New Account?<Nav.Link as={Link} to='/register'>Register Now</Nav.Link></p>
                         <p className='flex items-center'>Forgot Password<Nav.Link as={Link} to='/register'>Reset Password</Nav.Link></p>
                         <Button variant="primary" type="submit">
