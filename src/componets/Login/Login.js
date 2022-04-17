@@ -27,12 +27,12 @@ const Login = () => {
             setPassword(event.target.value);
            
       }
-      const from = location.state.from.pathname || '/';
+      const from = location.state?.from?.pathname ||'/';
       const handleSubmit=(event)=>{
            event.preventDefault();
            signInWithEmailAndPassword(email,password);
 
-        navigate(from,{replace:true});
+           navigate(from,{replace:true});
       }
       return (
            <div className='login-container'>
@@ -62,7 +62,8 @@ const Login = () => {
                         Submit
                         </Button>
                   </Form>
-            </div> 
+            </div>
+            
            </div>
       );
 };
