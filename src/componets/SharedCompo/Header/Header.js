@@ -1,11 +1,17 @@
 import React from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 const Header = () => {
+
+      const navigate =useNavigate();
+      const handleAppointment =()=>{
+            navigate('/appointment');
+      };
       return (
             <div>
-                  <Navbar collapseOnSelect expand="lg" className='text-black hover:text-blue-700 bg-lime-50 '>
+                  <Navbar collapseOnSelect expand="lg" className='text-black hover:text-blue-700 bg-white-500 '>
                    <Container className='gap-10 p-6 fs-5 '>
                    <Navbar.Brand as={Link} to='/' className='fs-3'>Hakim Tayen Uz-Zaman</Navbar.Brand>
                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -17,8 +23,9 @@ const Header = () => {
                         <Nav.Link as={Link} to='/aboutme'>About Me</Nav.Link>
                         </Nav>
                         
-                        
-                        <Nav.Link as={Link} to='/'>Make Appointment</Nav.Link>
+                        <Nav.Link className='border-2 rounded-lg p-2 mx-2 text-black hover:bg-blue-400 ' as={Link} to='/login'>Login</Nav.Link>
+                        <Nav.Link className='border-2 rounded-lg p-3 mx-2 text-black hover:bg-blue-400' onClick={handleAppointment} as={Link} to='/appointment'> Make Appointment</Nav.Link>
+                       
                         
                        
                         </Navbar.Collapse>

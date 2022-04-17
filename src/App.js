@@ -8,7 +8,9 @@ import Home from './componets/Home/Home';
 import Services from './componets/Services/Services';
 import NotFoundPage from './componets/NotFoundPage/NFP';
 import Blog from './componets/Blog/Blog';
+import Login from './componets/Login/Login'
 import AboutMe from './componets/AboutMe/AboutMe';
+import Appointment from './componets/Appointment/Appointment';
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
         <Route path='/blog' element={<Blog/>}></Route>
         <Route path='/aboutme' element={<AboutMe/>}></Route>
         <Route path='/*' element={<NotFoundPage/>}></Route>
+        <Route path='/login' element={<Login/>}></Route>
+        <Route path='/appointment' element={<Appointment/>}></Route>
       </Routes>
       <Footer></Footer>
       
