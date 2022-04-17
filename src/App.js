@@ -4,6 +4,11 @@ import Header from './componets/SharedCompo/Header/Header';
 import './App.css';
 import Footer from './componets/SharedCompo/Footer/Footer';
 import TopBanner from './componets/SharedCompo/TopBanner/TopBanner';
+import Home from './componets/Home/Home';
+import Services from './componets/Services/Services';
+import NotFoundPage from './componets/NotFoundPage/NFP';
+import Blog from './componets/Blog/Blog';
+import AboutMe from './componets/AboutMe/AboutMe';
 
 
 function App() {
@@ -12,7 +17,11 @@ function App() {
       <TopBanner></TopBanner>
       <Header></Header>
       <Routes>
-        <Route></Route>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path='/services' element={<Services></Services>}></Route>
+        <Route path='/blog' element={<Blog/>}></Route>
+        <Route path='/aboutme' element={<AboutMe/>}></Route>
+        <Route path='/*' element={<NotFoundPage/>}></Route>
       </Routes>
       <Footer></Footer>
       
