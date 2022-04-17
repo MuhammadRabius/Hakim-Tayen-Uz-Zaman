@@ -17,7 +17,7 @@ const DepartmentSerice = () => {
                                    <p className='text-3xl'>SP-NISHAT</p>
                                    <p className='text-3xl'>SP-NISHAT</p>
                                    <p className='text-3xl'>SP-NISHAT</p>
-                                   
+                                   <button className='border-2 rounded-lg p-3 mx-2 text-black hover:bg-blue-400'>Make Appointment</button>
                              </div>
                        </div>
 
@@ -31,7 +31,7 @@ const DepartmentSerice = () => {
                                    <p className='text-3xl'>SP-NISHAT</p>
                                    <p className='text-3xl'>SP-NISHAT</p>
                                    <p className='text-3xl'>SP-NISHAT</p>
-                              
+                                   <button className='border-2 rounded-lg p-3 mx-2 text-black hover:bg-blue-400'>Make Appointment</button>
                              </div>
                              <div>
                                    <img className=' border-0 rounded-lg ml-16' src={arthristisdeptImg} alt="" />
@@ -52,7 +52,7 @@ const DepartmentSerice = () => {
                                    <p className='text-3xl'>SP-NISHAT</p>
                                    <p className='text-3xl'>SP-NISHAT</p>
                                    <p className='text-3xl'>SP-NISHAT</p>
-                             
+                                   <button className='border-2 rounded-lg p-3 mx-2 text-black hover:bg-blue-400'>Make Appointment</button>
                              </div>
                        </div>
 

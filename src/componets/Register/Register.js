@@ -33,19 +33,17 @@ const Register = () => {
             SetConfirmPassowrd(event.target.value);
       }
 
-       if (error) {
-    return (
-      <div>
-        <p>Error: {error.message}</p>
-      </div>
-    );
-  }
+       
       
 
       const handleRegisterSubmit=(event)=>{
             event.preventDefault();
             if(password !==confirmPassword){
                   setError('Password MisMatch')
+                  return;
+            }
+            if(password.length<6){
+                  setError('Your Password Must be upto Six Digit');
                   return;
             }
 
@@ -83,7 +81,7 @@ const Register = () => {
                         <Form.Group className="mb-3" controlId="formBasicCheckbox">
                         <Form.Check type="checkbox" label="Accept Terms,Conditions and Privacy Policy" />
                         </Form.Group>
-                        
+                        <p>{error?.message}</p>
                         <Button variant="primary" type="submit">
                         Submit
                         </Button>

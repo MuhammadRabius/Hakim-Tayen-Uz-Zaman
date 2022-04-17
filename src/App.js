@@ -12,6 +12,7 @@ import Login from './componets/Login/Login'
 import AboutMe from './componets/AboutMe/AboutMe';
 import Register from './componets/Register/Register';
 import Appointment from './componets/Appointment/Appointment';
+import RequireAuth from './componets/ReqiureAuth/RequireAuth';
 
 
 function App() {
@@ -21,7 +22,12 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home/>}></Route>
-        <Route path='/services' element={<Services></Services>}></Route>
+        <Route path='/services' element={
+             <RequireAuth>
+               <Services></Services>
+             </RequireAuth>
+
+        }></Route>
         <Route path='/blog' element={<Blog/>}></Route>
         <Route path='/aboutme' element={<AboutMe/>}></Route>
         <Route path='/*' element={<NotFoundPage/>}></Route>

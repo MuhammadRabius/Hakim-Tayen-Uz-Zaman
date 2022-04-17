@@ -1,26 +1,38 @@
 import React, { useState } from 'react';
 import { Button, Form, Nav } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from './../../firebase.init';
 
 const Login = () => {
       const [email,setEmail]=useState('');
       const [password,setPassword]=useState('');
+      const [error,setError]=useState('');
+      const location=useLocation();
       const navigate =useNavigate();
+      const [
+                  signInWithEmailAndPassword,
+                  user,
+                  
+  ] = useSignInWithEmailAndPassword(auth);
 
 
       const handleEmail =event=>{
-            const email =event.target.value;
+            
             setEmail(event.target.value);
-            console.log(email);
+           
       }
       const handPassword =(event)=>{
-            const pass =event.target.value;
+            
             setPassword(event.target.value);
-            console.log(pass)
+           
       }
-      
-      const handleSubmit=()=>{
-        navigate('/');
+      const from = location.state.from.pathname || '/';
+      const handleSubmit=(event)=>{
+           event.preventDefault();
+           signInWithEmailAndPassword(email,password);
+
+        navigate(from,{replace:true});
       }
       return (
            <div className='login-container'>
@@ -45,6 +57,7 @@ const Login = () => {
                         
                         <p className='flex items-center'>Create New Account?<Nav.Link as={Link} to='/register'>Register Now</Nav.Link></p>
                         <p className='flex items-center'>Forgot Password<Nav.Link as={Link} to='/register'>Reset Password</Nav.Link></p>
+                        <p>{error?.massage}</p>
                         <Button variant="primary" type="submit">
                         Submit
                         </Button>
