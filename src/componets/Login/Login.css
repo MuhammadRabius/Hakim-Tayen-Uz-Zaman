@@ -1,0 +1,7 @@
+.login-container{
+      background-image: url(../../images/LogBg.jpg);
+      background-repeat:no-repeat;
+      background-size: 100%;
+      opacity: 40px;
+      background-position: center;
+}

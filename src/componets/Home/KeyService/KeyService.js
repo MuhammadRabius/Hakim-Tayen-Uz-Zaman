@@ -6,8 +6,8 @@ import sexualdremaMedImg from '../../../images/Card-3.jpg';
 
 const KeyService = () => {
       return (
-            <div>
-                  <div className='mt-24 text-center'>
+            <div className='bg-stone-100'>
+                  <div className='text-center p-10'>
                         <p className='text-2xl'>The Best Medical And General Practice Care!</p>
                         <h1 className='text-5xl'>Providing Natural Medical Care <br /> For The Sickest In Our Community.
                         </h1>

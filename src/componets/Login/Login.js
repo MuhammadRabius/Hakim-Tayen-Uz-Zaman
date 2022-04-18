@@ -5,6 +5,7 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from './../../firebase.init';
 import SocialLogIn from '../SharedCompo/SocialLogIn/SocialLogIn';
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
+import './Login.css';
 
 const Login = () => {
       const [email,setEmail]=useState('');
@@ -48,7 +49,7 @@ const Login = () => {
       }
       return (
            <div className='login-container'>
-                  <h1 className='text-center font-mono'>Please login</h1>
+                  <h1 className='text-center font-serif p-4'>Please login</h1>
 
 
                   <div className='flex justify-center p-10 font-serif '>
