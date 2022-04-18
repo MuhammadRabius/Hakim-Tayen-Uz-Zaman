@@ -8,7 +8,7 @@ const Footer = () => {
       
       return (
             <div className='bg-blue-500 p-4 '>
-                  <div className='grid grid-cols-3 gap-32'>
+                  <div className='grid grid-cols-1 lg:grid-cols-3 gap-32'>
                         <div className='text-white text-2xl font-serif'>
                               <p className='text-2xl'>Hakim Tayen Uz-Zaman</p>
                                <p className='flex items-center gap-2'> <AiTwotoneHome/>Chamber: SPLAB</p>

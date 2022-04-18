@@ -17,7 +17,7 @@ import RequireAuth from './componets/ReqiureAuth/RequireAuth';
 
 function App() {
   return (
-    <div>
+    <div >
       <TopBanner></TopBanner>
       <Header></Header>
       <Routes>

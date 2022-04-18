@@ -2,6 +2,12 @@
       background-image: url(../../images/LogBg.jpg);
       background-repeat:no-repeat;
       background-size: 100%;
-      opacity: 40px;
+    
       background-position: center;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-image:url(../../images/LogBg\ -\ Copy.jpg);
+  }
 }

@@ -3,7 +3,7 @@ import UnaniImg from '../../../images/why-unani.jpg'
 
 const UnaniSection = () => {
       return (
-            <div className='grid lg:grid-cols-2 p-8  bg-slate-100'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 p-8  bg-slate-100'>
                  <div>
                        <img className='w-full rounded-xl' src={UnaniImg} alt="" />
                   </div> 
