@@ -28,7 +28,7 @@ const SocialLogIn = () => {
                 <div>
                 </div>
                       <button onClick={()=>signInWithGoogle()} className='border-1 rounded-xl p-2 w-full hover:bg-blue-400 flex items-center'> <AiOutlineGooglePlus className='ml-20'></AiOutlineGooglePlus> <span className='px-4 font-serif'>Google Sing In</span></button>
-                      <button className='border-1 rounded-xl p-2 w-full hover:bg-blue-400 flex items-center mt-2'> <AiOutlineGooglePlus className='ml-20'></AiOutlineGooglePlus> <span className='px-4 font-serif'>facebook Sing In</span></button>
+                      
             </div>
             
       );
