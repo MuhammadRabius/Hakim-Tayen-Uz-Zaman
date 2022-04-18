@@ -36,7 +36,7 @@ const Footer = () => {
                               
                         </div>
                   </div>
-                  <h4 className='flex justify-center items-center gap-2 text-white font-serif mt-4'>All <AiOutlineCopyright/> 2022 Received by Muhammad Rabius</h4>
+                  <h4 className='flex justify-center items-center gap-2 text-white font-extralight mt-4'>All <AiOutlineCopyright/> 2022 Received by Muhammad Rabius</h4>
             </div>
       );
 };

@@ -27,9 +27,10 @@ const Header = () => {
                         <Nav.Link as={Link} to='/' >Home</Nav.Link>
                         <Nav.Link as={Link} to='/services'>Services</Nav.Link>
                         <Nav.Link as={Link} to='/blog'>Blog</Nav.Link>
+                        <Nav.Link onClick={handleAppointment} as={Link} to='/appointment'>Appointment</Nav.Link>
                         <Nav.Link as={Link} to='/aboutme'>About Me</Nav.Link>
                         </Nav>
-                        <Nav.Link className='border-2 rounded-lg p-3 mx-2 text-black hover:bg-blue-400' onClick={handleAppointment} as={Link} to='/appointment'> Make Appointment</Nav.Link>
+                        
                         
                         {
                               user?
